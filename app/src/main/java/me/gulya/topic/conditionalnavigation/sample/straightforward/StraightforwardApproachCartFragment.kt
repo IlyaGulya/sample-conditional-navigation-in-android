@@ -10,7 +10,6 @@ import me.gulya.topic.conditionalnavigation.sample.CheckoutScreen
 import me.gulya.topic.conditionalnavigation.sample.DI
 import me.gulya.topic.conditionalnavigation.sample.R
 import me.gulya.topic.conditionalnavigation.sample.straightforward.screens.StraightforwardApproachAuthScreen
-import me.gulya.topic.conditionalnavigation.sample.straightforward.screens.StraightforwardApproachCartScreen
 
 class StraightforwardApproachCartFragment : Fragment(R.layout.fragment_cart) {
 
@@ -32,7 +31,7 @@ class StraightforwardApproachCartFragment : Fragment(R.layout.fragment_cart) {
         view.findViewById<Button>(R.id.button_checkout)
             .setOnClickListener {
                 if (DI.isUserAuthorized) {
-                    DI.router.navigateTo(StraightforwardApproachCartScreen)
+                    DI.router.navigateTo(CheckoutScreen)
                 } else {
                     DI.router.navigateTo(StraightforwardApproachAuthScreen)
                 }
